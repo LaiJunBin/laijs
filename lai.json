@@ -1,0 +1,12 @@
+{
+    "global": {
+        "scripts": [
+            "https://laijunbin.github.io/js_library/Alert/alert.js"
+        ],
+
+        "styles": [
+            "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css",
+            "global.css"
+        ]
+    }
+}

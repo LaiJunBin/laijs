@@ -1,0 +1,17 @@
+<div>
+    <p (mouseover)="over()">{{ text }}</p>
+    <p (click)="homeClick(1, 2)">home work!</p>
+    <router-outlet name="a"></router-outlet>
+    <ul>
+        <li *for="i of item1">
+            {{ i }}
+            <ul>
+                <li *for="j of item2" (click)="hello(i,j)">
+                    {{ j }}
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<router-outlet name="b"></router-outlet>
