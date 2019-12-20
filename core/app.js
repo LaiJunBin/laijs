@@ -5,8 +5,8 @@ function url(uri = '') {
 
     return location.protocol + '//' +
         (location.host + location.pathname + uri)
-        .split('/')
-        .filter(x => ['', '.'].indexOf(x.trim()) == -1).join('/');
+            .split('/')
+            .filter(x => ['', '.'].indexOf(x.trim()) == -1).join('/');
 }
 
 function uriTrimSlash(uri = '') {
@@ -43,6 +43,7 @@ class App {
     static currentLoadingModule = null;
     static modules = [];
     static scripts = [];
+    static styles = {};
 
     static async loadModules(directory, moduleName = '', parentModuleIndex = -1) {
         Route.updatePath();

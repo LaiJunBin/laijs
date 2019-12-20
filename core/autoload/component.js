@@ -186,10 +186,7 @@ class Component {
                             .then(async () => {
                                 // Load global styles
                                 for (let styleUrl of Global.styles) {
-                                    let style = document.createElement('style');
-                                    let styleText = await fetch(url(styleUrl)).then(res => res.text());
-                                    style.append(styleText);
-                                    shadow.appendChild(style);
+                                    shadow.appendChild(App.styles[styleUrl].cloneNode(true));
                                 }
 
                                 // Load component styles

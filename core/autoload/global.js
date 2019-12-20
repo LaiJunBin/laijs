@@ -13,10 +13,11 @@ class Global {
 
         // Load global styles
         for (let styleUrl of Global.styles) {
-            let link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = styleUrl;
-            document.head.appendChild(link);
+            let style = document.createElement('style');
+            let styleText = await fetch(url(styleUrl)).then(res => res.text());
+            style.append(styleText);
+            App.styles[styleUrl] = style;
+            document.head.appendChild(style);
         }
     }
 
